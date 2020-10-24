@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Play", sans-serif;
+  color: white;
+}
+
+.carousel {
+  max-width: 600px;
+  position: relative;
+}
+
+.carousel-item,
+.carousel-item-hidden {
+  animation: fadeOut 2s;
+  display: none;
+}
+
+.carousel-item-visible {
+  display: block;
+  animation: fadeVisability 2s;
+}
+
+.carousel-item-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 45%;
+  height: relative;
+  padding: 15px;
+  padding-left: 60px;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  margin-top: 6px;
+}
+
+.carousel-actions {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#breadcrumbs {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  height: 10px;
+  padding: 0;
+}
+
+.breadcrumb {
+  display: inline-block;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.breadcrumb + .breadcrumb {
+  margin-left: 4px;
+}
+
+.breadcrumb-active {
+  opacity: 0.7;
+}
+
+button {
+  border-radius: 50px;
+  background-color: black;
+  color: white;
+  border: 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  opacity: 0.5;
+  outline: none;
+}
+
+button:hover,
+button:focus {
+  opacity: 0.7;
+  transition: 0.4s;
+}
+
+#carousel-button-prev {
+  margin-left: 20px;
+}
+
+#carousel-button-next {
+  margin-right: 20px;
+}
+
+@keyframes fadeVisability {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
